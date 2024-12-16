@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for pie chart -->
+</head>
+<body>
+    <div class="container">
+        <h1>Investment Portfolio Tracker</h1>
+
+        <!-- Total Portfolio Value -->
+        <div class="portfolio-value">
+            <h2>Total Portfolio Value: $<span id="totalValue">0</span></h2>
+        </div>
+
+        <!-- Add New Investment Form -->
+        <div class="investment-form">
+            <h3>Add New Investment</h3>
+            <form id="addInvestmentForm">
+                <input type="text" id="assetName" placeholder="Asset Name" required>
+                <input type="number" id="investedAmount" placeholder="Amount Invested" required>
+                <input type="number" id="currentValue" placeholder="Current Value" required>
+                <button type="submit">Add Investment</button>
+            </form>
+        </div>
+
+        <!-- Investment List -->
+        <div class="investment-list">
+            <h3>Your Investments</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asset Name</th>
+                        <th>Invested</th>
+                        <th>Current</th>
+                        <th>% Change</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="investmentTable">
+                    <!-- Investment items will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pie Chart for Portfolio Distribution -->
+        <canvas id="portfolioChart"></canvas>
+
+        <!-- Footer -->
+        <footer>
+            <p>Manage your investments easily with our tracker!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

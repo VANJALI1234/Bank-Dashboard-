@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Claims Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Insurance Customer Self-Service Portal</h1>
+    <nav>
+      <button id="fileClaimBtn">File a Claim</button>
+      <button id="trackClaimsBtn">Track Claims</button>
+      <button id="chatbotBtn">Chatbot Assistance</button>
+    </nav>
+  </header>
+
+  <section id="claims-section">
+    <h2>Recent Claims</h2>
+    <table id="claimsTable">
+      <thead>
+        <tr>
+          <th>Claim Number</th>
+          <th>Status</th>
+          <th>Date Submitted</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic claims data will be added here -->
+      </tbody>
+    </table>
+  </section>
+
+  <section id="form-section" style="display:none;">
+    <h2>Submit a New Insurance Claim</h2>
+    <form id="claimForm">
+      <label for="policyNumber">Policy Number:</label>
+      <input type="text" id="policyNumber" required>
+      <label for="incidentDate">Incident Date:</label>
+      <input type="date" id="incidentDate" required>
+      <label for="description">Incident Description:</label>
+      <textarea id="description" required></textarea>
+      <label for="fileUpload">Attach Files:</label>
+      <input type="file" id="fileUpload">
+      <button type="submit">Submit Claim</button>
+    </form>
+  </section>
+
+  <section id="chatbot-section" style="display:none;">
+    <h2>Chatbot Assistance</h2>
+    <div id="chatbot">
+      <!-- Chatbot integration (Dialogflow or similar) -->
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
